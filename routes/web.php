@@ -1,11 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
-Route::get('/', fn() => view('home'))->name('home');
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
-Route::get('/about', fn() => view('about'))->name('about');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
-Route::get('/education', fn() => view('education'))->name('education');
+Route::get('/education', function () {
+    return view('education');
+})->name('education');
 
-Route::get('/projects', fn() => view('projects'))->name('projects');
+// Daftarkan route resource untuk Pertemuan 5
+Route::resource('projects', ProjectController::class);

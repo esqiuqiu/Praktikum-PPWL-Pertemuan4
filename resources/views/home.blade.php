@@ -14,7 +14,7 @@
         </p>
 
         <a href="{{ route('about') }}">Tentang Saya</a>
-        <a href="{{ route('projects') }}">Lihat Project</a>
+        <a href="{{ route('projects.index') }}">Lihat Project</a>
     </section>
 
 @endsection
